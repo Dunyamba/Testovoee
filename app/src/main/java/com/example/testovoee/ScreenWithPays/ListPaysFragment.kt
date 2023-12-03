@@ -44,7 +44,7 @@ class ListPaysFragment : Fragment() {
 
         viewModel.getToken(saveToken.getSavedToken(storage))
         viewModel.getList()
-        
+
         viewModel.listPayments.observe(viewLifecycleOwner) {
             val adapter = RecyclerAdapter(it)
             binding.listPayments.adapter = adapter
